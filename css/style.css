@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 400px;
+    padding: 50px;
+    box-shadow: 20px 20px 60px #d9d9d9, 
+    -20px -20px 60px #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.img-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-section img {
+    max-width: 250px;
+    position: absolute;
+    transition: .5s;
+}
+
+.img-section .circle {
+    height: 180px;
+    width: 180px;
+    background: linear-gradient(45deg, #f12711, #f5af19);
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+}
+
+.info {
+    margin: 35px 0;
+}
+
+.titlesection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titlesection .price {
+    font-size: 22px;
+    color: gray;
+    font-weight: 500;
+}
+
+.titlesection h3 {
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+}
+
+.info p {
+    color: gray;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.size-btn {
+    text-align: center;
+}
+
+.size-btn button {
+    font-size: 12px;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px #d9d9d9, 
+    -3px -3px 10px #ffffff;
+    border: none;
+    font-weight: 500;
+    padding: 5px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    margin: 0 3px;
+    color: gray;
+}
+
+.size-btn .active {
+    background-color: gray;
+    color: #fff;
+}
+
+.purchase {
+    width: 100%;
+    background-color: #f35714;
+    border: none;
+    padding: 15px;
+    border-radius: 50px; 
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.purchase:hover {
+    background-color: #e94600;
+}
+
+@media (pointer:none), (pointer:coarse) {
+    .img-section img {
+        animation: mymove 1s infinite alternate;
+    }
+}
+
+@keyframes mymove {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(1px, 0px);
+    }
+    50% {
+        transform: translate(0px, 1px);
+    }
+    75% {
+        transform: translate(1px, 0px);
+    }
+    100% {
+        transform: translate(0px, 1px);
+    }
+}
